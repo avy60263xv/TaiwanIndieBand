@@ -1,1 +1,14 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+@mixin size($width, $height)
+    width: $width
+    height: $height
+
+*
+   //border: solid 1px red
+body
+    +size(100%, 100%)
+    overflow: hidden
+
+.ShoppingCartIcon
+    +size(25px, 25px)

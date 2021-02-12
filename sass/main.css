@@ -11329,4 +11329,15 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ShoppingCartIcon {
+  width: 25px;
+  height: 25px;
+}
 /*# sourceMappingURL=main.css.map */
