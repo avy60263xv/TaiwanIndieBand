@@ -1,0 +1,20 @@
+{"BandName":"美秀集團",
+ "songs":[
+    {
+      "songName" : "捲煙",
+      "price" : 50
+    },
+    {
+      "songName" : "電火王",
+      "price" : 100
+    },
+    {
+      "songName" : "做事人",
+      "price" : 150
+    },
+    {
+      "songName" : "小老婆",
+      "price" : 50
+    }
+   ]
+}
