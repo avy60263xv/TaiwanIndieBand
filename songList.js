@@ -40,8 +40,9 @@ function showSongList(songsList){
     songs.innerHTML = `<div class="songBanner m-3"><img src="img/${songsList.BandName}/${songsList.BandName}Banner.jpg" alt=""></div>${songList}`;
 }
 
-var buyingList = []; //存有購買的歌曲，用物件存
-//購物車列表
+var buyingList = []; //存有購買的歌曲，用物件存，購物車列表
+
+//購物車新增
 function additem(BandName, songName, price){
     var song = {
         BandName: BandName,
@@ -53,14 +54,20 @@ function additem(BandName, songName, price){
     Showbuyitmes(buyingList);
 }
 
-function deleteitem(){
-
+//購物車刪除
+function deleteitem(deletesong){
+    buyingList.splice(deletesong,1)
+    console.log(buyingList);
+    Showbuyitmes(buyingList);
+    
 }
 
 function Showbuyitmes(item){
     let ShowCart = document.getElementById("ShowCart");
-    //let addCartHtml = `<li>${songName} $${price} <button class="cancelX">X</button></li>`;
-    console.log(item);
-
-    
+    var addCartHtml=''; 
+    for(let i=0; i<item.length; i++){
+        addCartHtml += `<li>${item[i].songName} ${item[i].price} <button id="delete" onclick="deleteitem(${i})">X</button></li>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
+    }
+    //console.log(addCartHtml);
+    ShowCart.innerHTML = addCartHtml;
 }
