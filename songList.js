@@ -42,6 +42,20 @@ function showSongList(songsList){
 
 var buyingList = []; //存有購買的歌曲，用物件存，購物車列表
 
+const MycartIcon = document.getElementById("Mycart");
+MycartIcon.addEventListener("mouseenter", function(){
+    document.querySelector("table").style.display = 'block';
+})
+document.querySelector("table").addEventListener("mouseleave", function(){
+    document.querySelector("table").style.display = 'none';
+})
+window.addEventListener("scroll", function(){
+    document.querySelector("table").style.display = 'none';
+})
+/*document.querySelector("table").addEventListener("mouseleave", function(){
+    document.querySelector("table").style.display = 'none';
+})*/
+
 //購物車新增
 function additem(BandName, songName, price){
     var song = {
@@ -57,7 +71,7 @@ function additem(BandName, songName, price){
 //購物車刪除
 function deleteitem(deletesong){
     buyingList.splice(deletesong,1)
-    console.log(buyingList);
+    //console.log(buyingList);
     Showbuyitmes(buyingList);
     
 }
@@ -66,7 +80,7 @@ function Showbuyitmes(item){
     let ShowCart = document.getElementById("ShowCart");
     var addCartHtml=''; 
     for(let i=0; i<item.length; i++){
-        addCartHtml += `<li>${item[i].songName} ${item[i].price} <button id="delete" onclick="deleteitem(${i})">X</button></li>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
+        addCartHtml += `<tr><td>${item[i].songName}</td> <td>${item[i].price}</td> <td><button id="delete" onclick="deleteitem(${i})">X</button></td></tr>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
     }
     //console.log(addCartHtml);
     ShowCart.innerHTML = addCartHtml;
