@@ -15,6 +15,8 @@ input
     -webkit-appearance: none
     border-radius: 0s
 
+//@import "../node_modules/bootstrap/scss/bootstrap";
+@import "main"
 @import "../node_modules/rfs/scss"
 
 //CSS開始
@@ -70,3 +72,11 @@ input
         position: absolute
         right: 25px
         top: 50%
+
+#BandListName
+    li
+        cursor: pointer
+        &:hover:after
+            content: "<"
+            color: $primary
+            

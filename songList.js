@@ -2,13 +2,13 @@
 //動態改變頁面樂團歌單
 const BandListName = document.getElementById("BandListName");
 const ListNames = BandListName.querySelectorAll("li");
-console.log(ListNames);
+//console.log(ListNames);
 for(let i=0; i<ListNames.length; i++){
     ListNames[i].addEventListener("click", ChangePageSongs);
 }
 function ChangePageSongs(){
     let BandName = this.getAttribute("data-value")
-    console.log(BandName);
+    //console.log(BandName);
     var requestURL = `JSON/${BandName}.json`;
     fetch(requestURL).then(function(response) {
         response.json().then(function(songsList) {
@@ -31,11 +31,36 @@ function showSongList(songsList){
                 <span class="SongName my-3">${songsList.songs[i].songName}</span>
                 <span>${songsList.BandName}</span>
                 <img src="img/icon/play.png" alt="">
-                <img src="img/icon/add.png" alt="">
+                <img onclick="add('${songsList.BandName}', '${songsList.songs[i].songName}', '${songsList.songs[i].price}')" src="img/icon/add.png" alt="">
             </div>
             `
         songList += songsHtml;
     }
     //console.log(songList);
     songs.innerHTML = `<div class="songBanner m-3"><img src="img/${songsList.BandName}/${songsList.BandName}Banner.jpg" alt=""></div>${songList}`;
+}
+
+var buyingList = []; //存有購買的歌曲，用物件存
+//購物車列表
+function add(BandName, songName, price){
+    var song = {
+        BandName: BandName,
+        songName: songName,
+        price: price
+    };
+    buyingList.push(song); //購買一筆歌曲
+    //console.log(buyingList);
+    Showbuyitmes(buyingList);
+}
+
+function delete(){
+    
+}
+
+function Showbuyitmes(item){
+    let ShowCart = document.getElementById("ShowCart");
+    //let addCartHtml = `<li>${songName} $${price} <button class="cancelX">X</button></li>`;
+    console.log(item);
+
+    
 }
