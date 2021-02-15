@@ -31,7 +31,7 @@ function showSongList(songsList){
                 <span class="SongName my-3">${songsList.songs[i].songName}</span>
                 <span>${songsList.BandName}</span>
                 <img src="img/icon/play.png" alt="">
-                <img onclick="add('${songsList.BandName}', '${songsList.songs[i].songName}', '${songsList.songs[i].price}')" src="img/icon/add.png" alt="">
+                <img onclick="additem('${songsList.BandName}', '${songsList.songs[i].songName}', '${songsList.songs[i].price}')" src="img/icon/add.png" alt="">
             </div>
             `
         songList += songsHtml;
@@ -42,7 +42,7 @@ function showSongList(songsList){
 
 var buyingList = []; //存有購買的歌曲，用物件存
 //購物車列表
-function add(BandName, songName, price){
+function additem(BandName, songName, price){
     var song = {
         BandName: BandName,
         songName: songName,
@@ -53,8 +53,8 @@ function add(BandName, songName, price){
     Showbuyitmes(buyingList);
 }
 
-function delete(){
-    
+function deleteitem(){
+
 }
 
 function Showbuyitmes(item){
