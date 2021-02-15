@@ -2,19 +2,23 @@
  "songs":[
     {
       "songName" : "捲煙",
-      "price" : 50
+      "price" : 50,
+      "musicPath" : ""
     },
     {
       "songName" : "電火王",
-      "price" : 100
+      "price" : 100,
+      "musicPath" : ""
     },
     {
       "songName" : "做事人",
-      "price" : 150
+      "price" : 150,
+      "musicPath" : ""
     },
     {
       "songName" : "小老婆",
-      "price" : 50
+      "price" : 50,
+      "musicPath" : ""
     }
    ]
 }

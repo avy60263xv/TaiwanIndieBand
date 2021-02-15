@@ -47,16 +47,16 @@
     <!--主要音樂部分-->
         <div class="row mt-2">
           <div class="row justify-content-md-center">
-            <div class="bandList col-3 shadow bg-body rounded-3 my-3">
+            <div id="bandList" class="bandList col-3 shadow bg-body rounded-3 my-3">
               <!--Search Bar-->
               <form class="searchForm" action="">
                 <input type="text" class="searchBand my-2">
                 <img class="searchButton" src="img/icon/searchButton.png" alt="">
               </form>
-              <ul>
-                <li class="fw-bold my-3">美秀集團</li>
-                <li class="fw-bold my-3">告五人</li>
-                <li class="fw-bold my-3">茄子蛋</li>
+              <ul id="BandListName">
+                <li class="fw-bold my-3" data-value="美秀集團">美秀集團</li>
+                <li class="fw-bold my-3" data-value="告五人">告五人</li>
+                <li class="fw-bold my-3" data-value="茄子蛋">茄子蛋</li>
               </ul>
             </div>
             <!--song List-->

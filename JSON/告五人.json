@@ -1,0 +1,34 @@
+{"BandName":"告五人",
+ "songs":[
+    {
+      "songName" : "在這座城市遺失了你",
+      "price" : 50,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "批星戴月的想你",
+      "price" : 100,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "唯一",
+      "price" : 150,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "愛人錯過",
+      "price" : 50,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "運氣來得若有似無",
+      "price" : 50,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "愛在夏天",
+      "price" : 50,
+      "musicPath" : ""
+    }
+   ]
+}

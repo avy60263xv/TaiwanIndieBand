@@ -1,0 +1,19 @@
+{"BandName":"茄子蛋",
+ "songs":[
+    {
+      "songName" : "日常",
+      "price" : 50,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "浪子回頭",
+      "price" : 100,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "浪流連",
+      "price" : 150,
+      "musicPath" : ""
+    }
+   ]
+}
