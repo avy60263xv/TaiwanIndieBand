@@ -4,24 +4,25 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="sass/music.css">
     <script defer src="songList.js"></script>
     <title>台灣獨立樂團</title>
+    <link rel="shortcut icon" href="img/logo.ico"/>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <div class="col"><a class="navbar-brand" href="#">台灣獨立樂團</a></div>
+        <div class="col"><a class="navbar-brand" href="index.html"> <img class="logoImg" src="img/logo.png" alt=""> 台灣獨立樂團</a></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul class="navbar-nav ">
                 <li class="nav-item me-5">
-                  <a class="nav-link" aria-current="page" href="#">樂團與歌單</a>
+                  <a class="nav-link" aria-current="page" href="music.html">樂團與歌單</a>
                 </li>
                 <li class="nav-item me-5">
                   <a class="nav-link" href="#">聯繫</a>
@@ -39,10 +40,8 @@
       </div>
     </nav>
     <!--購物車小清單-->
-    <table id="ShowCart" class="ShowCart">
-      <tr>
-      </tr>
-    </table>
+    <div id="MyCart" class="ShowMyCart shadow bg-body rounded-3">
+    </div>
 
     <section class="musicMain">
       <div class="container">

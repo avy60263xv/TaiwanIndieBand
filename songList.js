@@ -44,13 +44,13 @@ var buyingList = []; //存有購買的歌曲，用物件存，購物車列表
 
 const MycartIcon = document.getElementById("Mycart");
 MycartIcon.addEventListener("mouseenter", function(){
-    document.querySelector("table").style.display = 'block';
+    document.getElementById("MyCart").style.display = 'block';
 })
-document.querySelector("table").addEventListener("mouseleave", function(){
-    document.querySelector("table").style.display = 'none';
+document.getElementById("MyCart").addEventListener("mouseleave", function(){
+    document.getElementById("MyCart").style.display = 'none';
 })
 window.addEventListener("scroll", function(){
-    document.querySelector("table").style.display = 'none';
+    document.getElementById("MyCart").style.display = 'none';
 })
 /*document.querySelector("table").addEventListener("mouseleave", function(){
     document.querySelector("table").style.display = 'none';
@@ -77,11 +77,19 @@ function deleteitem(deletesong){
 }
 
 function Showbuyitmes(item){
-    let ShowCart = document.getElementById("ShowCart");
+    let ShowCart = document.getElementById("MyCart");
     var addCartHtml=''; 
     for(let i=0; i<item.length; i++){
-        addCartHtml += `<tr><td>${item[i].songName}</td> <td>${item[i].price}</td> <td><button id="delete" onclick="deleteitem(${i})">X</button></td></tr>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
+        //addCartHtml += `<tr><td>${item[i].songName}</td> <td>${item[i].price}</td> <td><button id="delete" onclick="deleteitem(${i})">X</button></td></tr>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
+        addCartHtml += `      
+        <div class="item">
+            <img src="img/${item[i].BandName}/${item[i].songName}.jpg" alt="">
+            <span class="songName">${item[i].songName}</span>
+            <span class="bandName">${item[i].BandName}</span>
+            <span class="price">$${item[i].price}</span>
+            <img class="cancel" onclick="deleteitem(${i})" src="img/icon/cancel.png" alt="">
+        </div>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
     }
     //console.log(addCartHtml);
-    ShowCart.innerHTML = addCartHtml;
+    ShowCart.innerHTML = addCartHtml + `<button class="m-3">Check Out</button>`;
 }

@@ -1,5 +1,7 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "../node_modules/rfs/scss"
+@import "../node_modules/rfs/scss";
+//字體
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 
 @mixin size($width, $height)
     width: $width
@@ -7,6 +9,7 @@
 
 *
    //border: solid 1px red
+    font-family: 'Noto Sans TC', sans-serif
    
 body
     +size(100%, 100%)
@@ -25,23 +28,72 @@ body
 .ShoppingCartIcon
     +size(25px, 25px)
 
-.title
-    @include font-size(2rem !important)
+.navbar-brand
+    @include font-size(1.5rem !important)
 
+.navbar
+    .navbar-brand
+        img
+            +size(30px, 30px)
 .intro
     @include font-size(1rem !important)
 
 .ShowCart
-    +size(300px, auto)
+    +size(20%, auto)
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12)
     z-index: 100
     background: $white
-    position: fixed
-    right: 50px
-    top: 60px
+    position: relative
+    //right: 5%
+    //top: 60px
     display: none
     text-align: right
     .cancelX
         position: relative
         right: 0px
 
+.ShowMyCart
+    +size(305px, auto)
+    position: absolute
+    right: 2%
+    z-index: 100
+    background: $white
+    display: none
+    button
+        +size(120px, 40px)
+        border-radius: 50px
+        border: none
+        position: relative
+        left: 150px
+        color: white
+        background: $primary
+    .item
+        +size(100%, 80px)
+        position: relative
+        img
+            +size(55px, auto)
+            border-radius: 5px
+            margin-top: 10px
+            margin-left: 10px
+        .songName
+            font-weight: 700
+            font-size: 16px
+            position: absolute
+            top: 20px
+            left: 30%          
+        .bandName
+            position: absolute
+            font-size: 12px
+            bottom: 16px
+            left: 30%   
+        .price  
+            position: absolute
+            font-size: 12px
+            bottom: 16px
+            left: 60%  
+        .cancel
+            +size(15px, 15px)
+            cursor: pointer
+            position: absolute
+            top: 20px
+            right: 5%   

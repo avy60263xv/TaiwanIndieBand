@@ -23,7 +23,10 @@ input
 @mixin size($width, $height)
     width: $width
     height: $height
-    
+
+*
+   //border: solid 1px red
+
 
 .bandList
     +size(250px, auto)
@@ -81,4 +84,6 @@ input
         &:hover:after
             content: "<"
             color: $primary
+
+
             
