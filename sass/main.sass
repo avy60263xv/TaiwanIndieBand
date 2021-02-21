@@ -1,3 +1,20 @@
+//樣式歸0
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
+    margin: 0
+    border: 0
+    font-size: 100%
+    vertical-align: baseline
+
+body
+    line-height: 1
+
+ol, ul
+    list-style: none
+
+input
+    -webkit-appearance: none
+    border-radius: 0s
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/rfs/scss";
 //字體
@@ -6,18 +23,46 @@
 @mixin size($width, $height)
     width: $width
     height: $height
-
+    
+@mixin circle($width, $height, $color, $top, $left)
+    width: $width
+    height: $height
+    background: $color
+    top: $top
+    left: $left
+    z-index: 1
+    border-radius: 100%
+    position: absolute
+// $linercolor $blue $purple $pink $gray-800 $white
 *
-   //border: solid 1px red
     font-family: 'Noto Sans TC', sans-serif
-   
+    position: relative
+
+.colorButton
+    +size(140px,45px)
+    border: solid 1px $blue
+    color: $white
+    @include font-size(1rem !important)
+    border-radius: 50px
+    background: $blue
+    box-shadow: $blue 0px 3px 15px 0px
+    &:hover
+        background: $linercolor
+        box-shadow: none
+        border: solid 0px $blue
+
 body
     +size(100%, 100%)
     position: relative
+    //border: solid 1px #000 !important
+
+nav
+    background: $linercolor
+    color: $white
 
 .footer
     +size(100%, auto)
-    background: $blue
+    background: $pink
     position: relative
     bottom: 0px
 
@@ -28,15 +73,28 @@ body
 .ShoppingCartIcon
     +size(25px, 25px)
 
-.navbar-brand
-    @include font-size(1.5rem !important)
+
+.navbar-light 
+    .navbar-nav 
+        .nav-link
+            color: $white
+            &:hover
+                color: $blue
+                transition: color 1s ease
+        a
+            &:hover
+                border-bottom: solid 2px $blue
 
 .navbar
     .navbar-brand
+        @include font-size(1.5rem !important)
+        font-weight: 700
+        color: $white
+        &:hover
+            color: $pink
         img
-            +size(30px, 30px)
-.intro
-    @include font-size(1rem !important)
+            +size(25px, 25px)
+    
 
 .ShowCart
     +size(20%, auto)
@@ -97,3 +155,43 @@ body
             position: absolute
             top: 20px
             right: 5%   
+
+
+
+.mainImg
+    +size(100%, auto)
+    height: 80vh
+    background-image: linear-gradient(rgba(158, 130, 186, 0.1), rgba(158, 130, 186, 0.8)), url("../img/mainBanner.jpg")
+    background-position: center
+    background-repeat: no-repeat
+    color: $white
+    .container
+        position: relative
+        top: 50%
+        z-index: 100
+        h1
+            max-width: 250px
+            border-top: solid 3px $pink
+            padding-top: 20px
+        button 
+            margin-left: 50px
+        @media screen and ( max-width:1006px)
+            h1
+                margin-left: 10px
+            button
+                margin: 0px
+    @media screen and ( max-width:414px)
+        .container
+            top: 25%
+
+.circle1
+    +circle(25px, 25px ,$blue, 10%, 90%)
+.circle2
+    +circle(50px, 50px ,$pink, 30%, 60%)
+    opacity: 0.5
+.circle3
+    +circle(70px, 70px, $linercolor, 95%, 10%)
+@media screen and ( max-width:414px)
+    .circle3
+        display: none
+        
