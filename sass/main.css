@@ -11603,4 +11603,43 @@ nav {
     display: none;
   }
 }
+
+.NewBaneTitle h1, .NewBaneTitle .h1 {
+  color: #343a40;
+  text-align: center;
+}
+
+.NewBaneTitle h5, .NewBaneTitle .h5 {
+  color: #9e82ba;
+  text-align: center;
+  font-size: 1.2rem !important;
+}
+
+.Arrow .splide__arrows {
+  font-size: 16px;
+  position: relative;
+  top: 50%;
+  margin: 0 -50px;
+}
+
+.Slider {
+  background: linear-gradient(45deg, #57ddff 0%, #ee196a 100%);
+  padding: 20px;
+}
+
+.Slider .splide__slide img {
+  width: 75%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (max-width: 414px) {
+  .Slider .splide__slide img {
+    width: 100%;
+    height: auto;
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,10 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+html, body, div, span, object, iframe, figure, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, blockquote, pre, a, code, em, img, small, .small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0s;
+}
+
 /*!
  * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 :root {
   --bs-linercolor: linear-gradient(45deg, #57ddff 0%, #ee196a 100%);
   --bs-blue: #62e1ff;
@@ -149,8 +169,7 @@ address {
   line-height: inherit;
 }
 
-ol,
-ul {
+ol, ul {
   padding-left: 2rem;
 }
 
@@ -11340,14 +11359,20 @@ fieldset:disabled .btn {
 .colorButton {
   width: 140px;
   height: 45px;
-  border: soild 1px #fff;
+  border: solid 1px #62e1ff;
   color: #fff;
   font-size: 1rem !important;
   border-radius: 50px;
+  background: #62e1ff;
+  -webkit-box-shadow: #62e1ff 0px 3px 15px 0px;
+          box-shadow: #62e1ff 0px 3px 15px 0px;
 }
 
 .colorButton:hover {
   background: linear-gradient(45deg, #57ddff 0%, #ee196a 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: solid 0px #62e1ff;
 }
 
 body {
@@ -11511,6 +11536,7 @@ nav {
 .mainImg .container {
   position: relative;
   top: 50%;
+  z-index: 100;
 }
 
 .mainImg .container h1, .mainImg .container .h1 {
@@ -11524,6 +11550,9 @@ nav {
 }
 
 @media screen and (max-width: 1006px) {
+  .mainImg .container h1, .mainImg .container .h1 {
+    margin-left: 10px;
+  }
   .mainImg .container button {
     margin: 0px;
   }
@@ -11532,6 +11561,46 @@ nav {
 @media screen and (max-width: 414px) {
   .mainImg .container {
     top: 25%;
+  }
+}
+
+.circle1 {
+  width: 25px;
+  height: 25px;
+  background: #62e1ff;
+  top: 10%;
+  left: 90%;
+  z-index: 1;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.circle2 {
+  width: 50px;
+  height: 50px;
+  background: #f01a75;
+  top: 30%;
+  left: 60%;
+  z-index: 1;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.circle3 {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #57ddff 0%, #ee196a 100%);
+  top: 95%;
+  left: 10%;
+  z-index: 1;
+  border-radius: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 414px) {
+  .circle3 {
+    display: none;
   }
 }
 

@@ -156,8 +156,6 @@ nav
             top: 20px
             right: 5%   
 
-
-
 .mainImg
     +size(100%, auto)
     height: 80vh
@@ -194,4 +192,35 @@ nav
 @media screen and ( max-width:414px)
     .circle3
         display: none
+.NewBaneTitle
+    h1
+        color: $gray-800
+        text-align: center
+    h5
+        color: $purple
+        text-align: center
+        @include font-size(1.2rem !important)
+
+.Arrow
+    .splide__arrows
+        font-size: 16px
+        position: relative
+        top: 50%
+        margin: 0 -50px
+
+.Slider
+    background: $linercolor
+    padding: 20px
+    .splide__slide
+        img
+            +size(75%, auto)
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            -webkit-filter:brightness(0.5)
+        &:hover
+            -webkit-filter:brightness(1)
+        @media screen and ( max-width:414px)
+            img
+                +size(100%, auto)
         
