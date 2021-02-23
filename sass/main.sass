@@ -217,10 +217,26 @@ nav
             position: relative
             left: 50%
             transform: translateX(-50%)
-            -webkit-filter:brightness(0.5)
-        &:hover
-            -webkit-filter:brightness(1)
-        @media screen and ( max-width:414px)
-            img
-                +size(100%, auto)
+        .NewBandMask
+            +size(75%, 50%)
+            position: absolute
+            top: 75px
+            left: 50%
+            transform: translateX(-50%)
+            &:hover
+                transition: 0.5s
+                background: rgba(98, 225, 255, 0.7)
+                span
+                    transition: 0.5s
+                    color: rgba(255, 255, 255, 1)
+            span
+                color: rgba(255, 255, 255, 0)
+                position: absolute
+                font-size: 14px
+                bottom: 50px
+                left: 10px
+                
+
+                
+            
         

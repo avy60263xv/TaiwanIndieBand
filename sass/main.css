@@ -11636,10 +11636,33 @@ nav {
           transform: translateX(-50%);
 }
 
-@media screen and (max-width: 414px) {
-  .Slider .splide__slide img {
-    width: 100%;
-    height: auto;
-  }
+.Slider .splide__slide .NewBandMask {
+  width: 75%;
+  height: 50%;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.Slider .splide__slide .NewBandMask:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: rgba(98, 225, 255, 0.7);
+}
+
+.Slider .splide__slide .NewBandMask:hover span {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+}
+
+.Slider .splide__slide .NewBandMask span {
+  color: rgba(255, 255, 255, 0);
+  position: absolute;
+  font-size: 14px;
+  bottom: 50px;
+  left: 10px;
 }
 /*# sourceMappingURL=main.css.map */
