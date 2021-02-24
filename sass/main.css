@@ -11390,13 +11390,96 @@ nav {
   width: 100%;
   height: auto;
   background: #f01a75;
-  position: relative;
-  bottom: 0px;
+}
+
+.footer .E-newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer .E-newsletter input {
+  width: 200px;
+  height: 35px;
+  border: solid 2px #62e1ff;
+  color: #62e1ff;
+  padding-left: 5px;
+  -webkit-box-shadow: 0 6px 10px -4px #57ddff, 0 0 5px 0px #57ddff inset;
+          box-shadow: 0 6px 10px -4px #57ddff, 0 0 5px 0px #57ddff inset;
+}
+
+.footer .E-newsletter ::-webkit-input-placeholder {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #62e1ff;
+  padding-left: 5px;
+}
+
+.footer .E-newsletter :-ms-input-placeholder {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #62e1ff;
+  padding-left: 5px;
+}
+
+.footer .E-newsletter ::-ms-input-placeholder {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #62e1ff;
+  padding-left: 5px;
+}
+
+.footer .E-newsletter ::placeholder {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #62e1ff;
+  padding-left: 5px;
+}
+
+.footer .E-newsletter img {
+  width: 30px;
+  height: auto;
 }
 
 .footerWord {
   color: #fff;
   font-size: 0.8rem !important;
+}
+
+.footer_ {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  position: relative;
+  bottom: 0px;
+  color: #f01a75;
+}
+
+.footer_ img {
+  width: 25px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.footer_ span {
+  position: absolute;
+  right: 0px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 414px) {
+  .footer_ span {
+    display: none;
+  }
+}
+
+.IgFbMail {
+  background-color: #fff;
+  width: 1140px;
+  height: 50px;
 }
 
 .ShoppingCartIcon {
