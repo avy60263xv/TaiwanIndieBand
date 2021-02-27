@@ -56,6 +56,41 @@
             right: 10px
             top: 12.5px
         
+.card
+    width: 14rem
+    .playMask
+        +size(100%, 100%)
+        position: absolute
+        //background: rgba(98, 225, 255, 0.7)
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        span
+            position: absolute
+            font-size: 35px
+            display: none
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &:hover
+            transition: 0.5s
+            background: rgba(98, 225, 255, 0.7)
+            cursor: pointer
+            span
+                display: block
+                transition: 0.5s
+                color: $gray-800
+    .card-body
+        color: $pink
+        i
+            position: relative
+            font-size: 20px
+            left: 70%
+            color: $gray-800
+            transition: 0.3s
+            &:hover
+                color: $blue
+                cursor: pointer
 
 .songBanner
     img
