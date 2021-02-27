@@ -29,15 +29,17 @@ function showSongList(songsList){
     //console.log(songs);
     var songsHtml = '';
     var songsHtmls = '';
+    let thisBandAllsongs = [];
     //console.log(songsList.songs.length);
     for(let i=0;i<songsList.songs.length;i++){
+        //console.log(thisBandAllsongs);
         songsHtml = `
             <div class="col">
                 <div class="card">
-                <audio src="music/${songsList.BandName}/${songsList.songs[i].songName}.mp3" controls></audio>
+                <audio id="${songsList.songs[i].songName}mp3" src="music/${songsList.BandName}/${songsList.songs[i].songName}.mp3"></audio>
                 <div>
                     <img src="img/${songsList.BandName}/${songsList.songs[i].songName}.jpg" class="card-img-top" alt="...">
-                    <div class="playMask"><span><i class="bi bi-play-circle-fill"></i></span></div>
+                    <div class="playMask"><span><i id="${songsList.songs[i].songName}playicon" class="bi bi-play-circle-fill" onclick="playMusic('${songsList.songs[i].songName}')"></i><i id="${songsList.songs[i].songName}pauseicon" class="bi bi-pause-circle-fill" onclick="pauseMusic('${songsList.songs[i].songName}')" style="display: none"></i></span></div>
                 </div>
                 <div class="card-body">
                     <h5>${songsList.songs[i].songName}</h5>
@@ -46,11 +48,12 @@ function showSongList(songsList){
                 </div>
             </div>
             `
-        console.log(songsHtml);
+        //console.log(songsHtml);
         songsHtmls += songsHtml;
     }
-    console.log(songs);
+    //console.log(songs);
     songs.innerHTML = songsHtmls;
+    
 }
 
 //撈localStorage的資料（先從字串轉回陣列-物件格式，在存到buyingList重新裡面）
@@ -99,7 +102,8 @@ function additem(BandName, songName, price){
             alert("此歌曲已加入購物車囉！");
         }
     }); 
-    console.log(buyingList);
+    //console.log(buyingList);
+    alert("新增成功！");
     //同時新增資料到localStorage(物件轉字串，存進localStorage)
     var buyingListString = JSON.stringify(buyingList);
     localStorage.setItem('myShoppingList',buyingListString);
@@ -132,4 +136,58 @@ function Showbuyitmes(buyingList){
     }
     //console.log(addCartHtml);
     ShowCart.innerHTML = addCartHtml + `<button class="m-3">Check Out</button>`;
+}
+
+function playMusic(songName){
+
+    allstop();
+
+    let song = document.getElementById(songName + "mp3");
+    let playicon = document.getElementById(songName + "playicon");
+    let pauseicon = document.getElementById(songName + "pauseicon");
+    song.play();
+    playicon.style.display = "none";
+    pauseicon.style.display = "inline";
+
+    //let Namespan = document.getElementById(songName + "span"); //抓那個span
+    //console.log(icon);
+    //換成暫停icon
+    //Namespan.innerHTML = `<i id="${songName}pauseicon" class="bi bi-pause-circle-fill" onclick="pauseMusic('${songName}')"></i>`
+    
+}
+    //全部都先暫停
+function allstop(){
+    const audios = document.querySelectorAll("audio");
+    for (let j = 0; j < audios.length; j++) {
+        audios[j].pause();   
+    }
+    //所有暫停鍵都消失
+    let pauseicon = document.getElementsByClassName("bi-pause-circle-fill");
+    console.log(pauseicon);
+    for (let i = 0; i < pauseicon.length; i++) {
+        pauseicon[i].style.display = "none";
+    }
+    //所有播放鍵都跑出來
+    let playicon = document.getElementsByClassName("bi-play-circle-fill");
+    console.log(playicon);
+    for (let j = 0; j < playicon.length; j++) {
+        playicon[j].style.display = "inline";
+    }
+
+}
+
+function pauseMusic(songName){
+    let song = document.getElementById(songName + "mp3");
+    let playicon = document.getElementById(songName + "playicon");
+    let pauseicon = document.getElementById(songName + "pauseicon");
+    playicon.style.display = "inline";
+    pauseicon.style.display = "none";
+   // let Namespan = document.getElementById(songName + "span");
+    //console.log(Namespan);
+    //console.log(icon);
+    //換成暫停icon
+    song.pause();
+    //Namespan.innerHTML = `<i id="${songName}playicon" class="bi bi-play-circle-fill onclick="playMusic('${songName}')"></i>`
+    //console.log(Namespan.innerHTML = `<i id="${songName}playicon" class="bi bi-play-circle-fill onclick="playMusic('${songName})"></i>`);
+    
 }
