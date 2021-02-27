@@ -11850,22 +11850,23 @@ nav {
   height: auto;
 }
 
-.searchForm {
-  position: relative;
+.BandButton {
+  background: rgba(98, 255, 255, 0.2);
 }
 
-.searchForm .searchBand {
-  width: 200px;
-  height: 30px;
-  font-size: 0.8rem !important;
+.BandButton form input {
+  width: 100%;
+  height: 40px;
+  font-size: 1rem !important;
 }
 
-.searchForm .searchButton {
-  width: 20px;
+.BandButton form .searchButton {
+  width: 30px;
   height: auto;
-  position: relative;
-  top: 5px;
-  right: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 12.5px;
 }
 
 .songBanner img {
@@ -11873,60 +11874,7 @@ nav {
   height: auto;
 }
 
-.song {
-  width: 100%;
-  height: 100px;
-  min-width: 280px;
-  border-radius: 25px;
-  position: relative;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12);
-}
-
-.song img:nth-child(1) {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  left: 25px;
-  top: 25px;
-}
-
-.song span:nth-child(2) {
-  position: absolute;
-  left: 100px;
-  top: 20px;
-  font-size: 1rem !important;
-}
-
-.song span:nth-child(3) {
-  position: absolute;
-  left: 100px;
-  bottom: 20px;
-  font-size: 0.8rem !important;
-}
-
-.song img:nth-child(4) {
-  width: 25px;
-  height: auto;
-  position: absolute;
-  right: 75px;
-  top: 60%;
-}
-
-.song img:nth-child(5) {
-  width: 25px;
-  height: auto;
-  position: absolute;
-  right: 25px;
-  top: 60%;
-}
-
 #BandListName li {
   cursor: pointer;
-}
-
-#BandListName li:hover:after {
-  content: "<";
-  color: #62e1ff;
 }
 /*# sourceMappingURL=music.css.map */

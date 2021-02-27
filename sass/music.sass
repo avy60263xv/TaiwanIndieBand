@@ -43,59 +43,27 @@
 .bandList
     +size(250px, auto)
 
-.searchForm
-    position: relative
-    .searchBand
-        +size(200px, 30px)
-        @include font-size(0.8rem !important)
-    .searchButton
-        +size(20px, auto)
-        position: relative
-        top: 5px
-        right: 35px
+.BandButton
+    background: rgba(98, 255, 255, 0.2)
+    form
+        input
+            +size(100%,40px)
+            @include font-size(1rem !important)
+        .searchButton
+            +size(30px, auto)
+            cursor: pointer
+            position: absolute
+            right: 10px
+            top: 12.5px
+        
 
 .songBanner
     img
         +size(100%, auto)
 
-.song
-    +size(100%, 100px)
-    min-width: 280px
-    border-radius: 25px
-    position: relative
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12)
-    img:nth-child(1)
-       +size(60px, 60px) 
-       position: absolute
-       left: 25px
-       top: 25px
-    span:nth-child(2)
-        position: absolute
-        left: 100px
-        top: 20px    
-        @include font-size(1rem !important)
-    span:nth-child(3)
-        position: absolute
-        left: 100px
-        bottom: 20px    
-        @include font-size(0.8rem !important)
-    img:nth-child(4)
-        +size(25px, auto) 
-        position: absolute
-        right: 75px
-        top: 60%
-    img:nth-child(5)
-        +size(25px, auto) 
-        position: absolute
-        right: 25px
-        top: 60%
 
 #BandListName
     li
         cursor: pointer
-        &:hover:after
-            content: "<"
-            color: $primary
-
 
             
