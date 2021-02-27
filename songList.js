@@ -4,6 +4,7 @@ const BandListName = document.getElementById("BandListName");
 const ListNames = BandListName.querySelectorAll("button");
 //console.log(ListNames);
 for(let i=0; i<ListNames.length; i++){
+    //console.log(ListNames[0]);
     ListNames[i].addEventListener("click", ChangePageSongs);
 }
 function ChangePageSongs(){
@@ -26,9 +27,11 @@ function ChangePageSongs(){
 function showSongList(songsList){
     let songs = document.getElementById("songs");
     //console.log(songs);
-    //var songsList = '';
+    var songsHtml = '';
+    var songsHtmls = '';
+    //console.log(songsList.songs.length);
     for(let i=0;i<songsList.songs.length;i++){
-        songsHtml= `
+        songsHtml = `
             <div class="col">
                 <div class="card">
                 <audio src="music/${songsList.BandName}/${songsList.songs[i].songName}.mp3" controls></audio>
@@ -38,18 +41,16 @@ function showSongList(songsList){
                 </div>
                 <div class="card-body">
                     <h5>${songsList.songs[i].songName}</h5>
-                    <span>${songsList.songs[i].price}<i onclick="additem('${songsList.BandName}', '${songsList.songs[i].songName}', '${songsList.songs[i].price}')" class="bi bi-plus-circle-fill"></i></span>
+                    <span>$${songsList.songs[i].price}<i onclick="additem('${songsList.BandName}', '${songsList.songs[i].songName}', '${songsList.songs[i].price}')" class="bi bi-plus-circle-fill"></i></span>
                 </div>
                 </div>
             </div>
             `
-        songsHtml += songsHtml;
         console.log(songsHtml);
+        songsHtmls += songsHtml;
     }
-    //console.log(songs);
-    //顯示不同樂團的Banner
-    songs.innerHTML += songsHtml;
-    //console.log(Idsongs);
+    console.log(songs);
+    songs.innerHTML = songsHtmls;
 }
 
 //撈localStorage的資料（先從字串轉回陣列-物件格式，在存到buyingList重新裡面）
