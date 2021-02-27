@@ -11807,6 +11807,44 @@ nav {
   }
 }
 
+.Banner .BannerTitle h1:nth-child(1), .Banner .BannerTitle .h1:nth-child(1) {
+  color: #62e1ff;
+  font-weight: 600;
+}
+
+.Banner .BannerTitle h1:nth-child(2), .Banner .BannerTitle .h1:nth-child(2) {
+  color: #f01a75;
+  font-weight: 700;
+}
+
+.Banner .BannerTitle p {
+  font-size: 1rem !important;
+  font-weight: 400;
+}
+
+.Banner .headsetimg .circle {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(45deg, #57ddff 0%, #ee196a 100%);
+  border-radius: 100%;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+.Banner .headsetimg img {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -75px;
+  left: -10px;
+}
+
+@media screen and (max-width: 414px) {
+  .Banner .headsetimg {
+    display: none;
+  }
+}
+
 .bandList {
   width: 250px;
   height: auto;

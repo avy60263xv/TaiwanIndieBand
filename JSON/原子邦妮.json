@@ -1,0 +1,25 @@
+{"BandName":"原子邦妮",
+ "songs":[
+    {
+      "songName" : "被你遺忘的森林",
+      "price" : 50,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "蒸發的世界剩下我",
+      "price" : 100,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "現在你好嗎",
+      "price" : 150,
+      "musicPath" : ""
+    },
+    {
+      "songName" : "謝謝你曾經讓我悲傷",
+      "price" : 150,
+      "musicPath" : ""
+    }
+    
+   ]
+}

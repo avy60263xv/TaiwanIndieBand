@@ -10,6 +10,35 @@
 *
    //border: solid 1px red
 
+.Banner
+    .BannerTitle
+        h1:nth-child(1)
+            color: $blue
+            font-weight: 600
+        h1:nth-child(2)
+            color: $pink
+            font-weight: 700
+        p
+            @include font-size(1rem !important)
+            font-weight: 400
+
+    .headsetimg
+        .circle
+            +size(250px, 250px)
+            //background: radial-gradient(circle,$blue,$purple,$pink)
+            background: $linercolor
+            border-radius: 100%
+            //box-shadow: 0 0 20px 20px rgba(240, 26, 117, 1)
+            filter: blur(10px)
+        img
+            +size(400px,400px)
+            position: absolute
+            top: -75px
+            left: -10px
+    @media screen and ( max-width: 414px )
+        .headsetimg
+            display: none
+                
 
 .bandList
     +size(250px, auto)
