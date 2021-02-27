@@ -95,21 +95,21 @@ function additem(BandName, songName, price){
     Showbuyitmes(buyingList);
 }
 
-//購物車刪除
-function deleteitem(deletesong){
-    buyingList.splice(deletesong,1)
-    //console.log(buyingList);
-    ////同時刪除localStorage中的該筆資料
+//購物車刪除(先收現在的localStorage,要刪的key)
+function deleteitem(key){
+    //先接現在的localStorage中的資料，字串轉物件
+    var buyingListString = localStorage.getItem('myShoppingList');
+    buyingList = JSON.parse(buyingListString);
+    buyingList.splice(key,1); //刪除使用者點的那一筆資料，並重新存回localStorage
+    localStorage.setItem('myShoppingList',JSON.stringify(buyingList));
     Showbuyitmes(buyingList);
     
 }
 
 function Showbuyitmes(buyingList){
     let ShowCart = document.getElementById("MyCart");
-
     var addCartHtml=''; 
     for(let i=0; i<buyingList.length; i++){
-        //addCartHtml += `<tr><td>${item[i].songName}</td> <td>${item[i].price}</td> <td><button id="delete" onclick="deleteitem(${i})">X</button></td></tr>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
         addCartHtml += `      
         <div class="item">
             <img src="img/${buyingList[i].BandName}/${buyingList[i].songName}.jpg" alt="">
