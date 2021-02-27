@@ -1,7 +1,7 @@
 
 //動態改變頁面樂團歌單
 const BandListName = document.getElementById("BandListName");
-const ListNames = BandListName.querySelectorAll("li");
+const ListNames = BandListName.querySelectorAll("button");
 //console.log(ListNames);
 for(let i=0; i<ListNames.length; i++){
     ListNames[i].addEventListener("click", ChangePageSongs);
@@ -10,6 +10,7 @@ function ChangePageSongs(){
     let BandName = this.getAttribute("data-value")
     //console.log(BandName);
     var requestURL = `JSON/${BandName}.json`;
+    //console.log(requestURL);
     fetch(requestURL).then(function(response) {
         response.json().then(function(songsList) {
             //console.log(songsList);
@@ -24,22 +25,31 @@ function ChangePageSongs(){
 //html骨架
 function showSongList(songsList){
     let songs = document.getElementById("songs");
-    var songList = '';
+    //console.log(songs);
+    //var songsList = '';
     for(let i=0;i<songsList.songs.length;i++){
         songsHtml= `
-            <div class="song my-3">
-                <img src="img/${songsList.BandName}/${songsList.songs[i].songName}.jpg" alt="">
-                <span class="SongName my-3">${songsList.songs[i].songName}</span>
-                <span>${songsList.BandName}</span>
-                <img src="img/icon/play.png" alt="">
-                <img onclick="additem('${songsList.BandName}', '${songsList.songs[i].songName}', '${songsList.songs[i].price}')" src="img/icon/add.png" alt="">
+            <div class="col">
+                <div class="card">
+                <audio src="music/${songsList.BandName}/${songsList.songs[i].songName}.mp3" controls></audio>
+                <div>
+                    <img src="img/${songsList.BandName}/${songsList.songs[i].songName}.jpg" class="card-img-top" alt="...">
+                    <div class="playMask"><span><i class="bi bi-play-circle-fill"></i></span></div>
+                </div>
+                <div class="card-body">
+                    <h5>${songsList.songs[i].songName}</h5>
+                    <span>${songsList.songs[i].price}<i onclick="additem('${songsList.BandName}', '${songsList.songs[i].songName}', '${songsList.songs[i].price}')" class="bi bi-plus-circle-fill"></i></span>
+                </div>
+                </div>
             </div>
             `
-        songList += songsHtml;
+        songsHtml += songsHtml;
+        console.log(songsHtml);
     }
-    //console.log(songList);
+    //console.log(songs);
     //顯示不同樂團的Banner
-    songs.innerHTML = `<div class="songBanner m-3"><img src="img/${songsList.BandName}/${songsList.BandName}Banner.jpg" alt=""></div>${songList}`;
+    songs.innerHTML += songsHtml;
+    //console.log(Idsongs);
 }
 
 //撈localStorage的資料（先從字串轉回陣列-物件格式，在存到buyingList重新裡面）
@@ -47,7 +57,7 @@ var getmyShoppingList = localStorage.getItem('myShoppingList');
 var buyingList; //存有購買的歌曲，用物件存，購物車列表
 if(getmyShoppingList){
     buyingList = JSON.parse(getmyShoppingList);
-    console.log(buyingList);
+    //console.log(buyingList);
     Showbuyitmes(buyingList);
 }else{
     buyingList = [];
