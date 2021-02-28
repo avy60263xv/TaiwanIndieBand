@@ -91,19 +91,25 @@ function additem(BandName, songName, price){
         price: price
     };
     
-    // 新增並過濾相同的物件
+    let beforeadd = buyingList.length; //beforeadd紀錄新增前的buyingList筆數
+
+    // 新增beforeadd並過濾相同的物件
     buyingList.push(song);
     const set = new Set();
    // buyingList =  buyingList.filter(item => !set.has(item.songName) ? set.add(item.songName) : false); //把第一次看到的物件留下來（用歌名比對）
+    //抓出buyingList所有筆數，確定是新的一筆資料才放入localstorage
     buyingList =  buyingList.filter(function(item){
         if(!set.has(item.songName)){
-            return set.add(item.songName);
-        }else{
-            alert("此歌曲已加入購物車囉！");
+            return set.add(item.songName); //這裡還是加很多次，但因為set 所有相同資料都被整合成一次
         }
-    }); 
-    //console.log(buyingList);
-    alert("新增成功！");
+    });
+    //判斷buyingList被真的加一筆，顯示購買成功
+    if(buyingList.length > beforeadd){
+        alert("新增購物車成功");
+    }
+    else{
+        alert("購物車已經有此商品囉");
+    }
     //同時新增資料到localStorage(物件轉字串，存進localStorage)
     var buyingListString = JSON.stringify(buyingList);
     localStorage.setItem('myShoppingList',buyingListString);
