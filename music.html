@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="sass/music.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script defer src="songList.js"></script>
+    <script defer src="ValidateEmail.js"></script>
     <title>台灣獨立樂團</title>
     <link rel="shortcut icon" href="img/logo.ico"/>
   </head>
@@ -152,8 +153,8 @@
           </div>
           <div class="col-12 col-lg-6">
               <div class="E-newsletter my-4">
-                <input type="mail" placeholder="訂閱電子報">
-                <a href="" class="ms-2"><img src="img/icon/goIcon.png" alt=""></a>
+                <input id="emailValue" type="mail" placeholder="訂閱電子報">
+                <a class="ms-2" style="cursor: pointer;"><img src="img/icon/goIcon.png" alt="" onclick="ValidateEmail()"></a>
               </div>
           </div>
         </div>
