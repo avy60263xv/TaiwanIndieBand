@@ -14,7 +14,8 @@ function BigSlider(){
         rewind : true,
         perMove:1,
         width: 2500,
-        pagination: false
+        pagination: false,
+        autoplay: true
     } ).mount();
 }
 
@@ -24,6 +25,7 @@ function SmallSlider(){
         rewind : true,
         perMove:1,
         width: 2500,
-        pagination: false
+        pagination: false,
+        autoplay: true
     } ).mount();
 }
