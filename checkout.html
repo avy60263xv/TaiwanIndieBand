@@ -35,10 +35,10 @@
                   <a class="nav-link" aria-current="page" href="music.html">樂團與歌單</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link" href="#">聯繫</a>
+                  <a class="nav-link" href="contact.html">聯繫</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link" href="#">APP</a>
+                  <a class="nav-link" href="APP.html">APP</a>
                 </li>
                 <li class="nav-item me-5">
                   <a id="Mycart" class="nav-link" href="#" tabindex="-1" aria-disabled="true">
@@ -109,11 +109,85 @@
                   <button class="btn btn-primary" onclick="stepper1.next()">付款</button>
                 </div>
                 <div id="test-l-2" class="content">
-                  <p class="text-center">test 2</p>
-                  <button class="btn btn-primary" onclick="stepper1.next()">下一步</button>
+                  <h3>請填寫您的付款資料</h3>
+                  <form class="row g-3 needs-validation mt-3" novalidate>
+                    <div class="row mt-3">
+                      <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">姓名(Name)</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col"></div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">信用卡號碼(Card Number)</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="XXXX XXXXXX XXXX" required>
+                        <div class="valid-feedback">
+                          OK!
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label">到期日(Expiration)</label>
+                          <select class="form-select" id="validationCustom03" required>
+                            <option selected disabled value="">mm/yy</option>
+                            <option>01/23</option>
+                            <option>02/23</option>
+                            <option>03/23</option>
+                            <option>04/23</option>
+                            <option>05/23</option>
+                            <option>06/23</option>
+                            <option>07/23</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            OK!
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom03" class="form-label">安全碼(Security Code)</label>
+                        <input type="text" class="form-control" id="validationCustom03" value="XXX" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-3">
+                        <label for="validationCustom05" class="form-label">郵遞區號(Zip)</label>
+                        <input type="text" class="form-control" id="validationCustom05" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label">縣市(State)</label>
+                        <select class="form-select" id="validationCustom04" required>
+                          <option selected disabled value="">Choose...</option>
+                          <option>...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label">地址(City)</label>
+                        <input type="text" class="form-control" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="row next2">
+                    <div class="col"></div>
+                    <div class="col-md-2">
+                      <button class="btn btn-primary" type="submit" onclick="stepper1.next()">下一步</button>
+                    </div>
+                  </div>
                 </div>
                 <div id="test-l-3" class="content">
-                  <p class="text-center">test 3</p>
                   <button class="btn btn-primary" onclick="finish()">送出訂單</button>
                 </div>
               </div>

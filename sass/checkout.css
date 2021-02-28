@@ -11852,6 +11852,10 @@ nav {
   height: 15px;
 }
 
+.next2 {
+  margin: 75px 0;
+}
+
 .active .bs-stepper-circle {
   background-color: #f01a75 !important;
 }
