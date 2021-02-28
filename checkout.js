@@ -3,23 +3,14 @@ var getmyShoppingList = localStorage.getItem('myShoppingList');
 var buyingList; //存有購買的歌曲，用物件存，購物車列表
 if(getmyShoppingList){
     buyingList = JSON.parse(getmyShoppingList);
-    console.log(buyingList);
+    //console.log(buyingList);
     Showbuyitmes(buyingList);
 }else{
     buyingList = [];
 }
 
-//購物車滑動出現/消失
-const MycartIcon = document.getElementById("Mycart");
-MycartIcon.addEventListener("mouseenter", function(){
-    document.getElementById("MyCart").style.display = 'block';
-})
-document.getElementById("MyCart").addEventListener("mouseleave", function(){
-    document.getElementById("MyCart").style.display = 'none';
-})
-window.addEventListener("scroll", function(){
-    document.getElementById("MyCart").style.display = 'none';
-})
+//頁面顯示資料
+Showbuyitmes(buyingList);
 
 //購物車刪除(先收現在的localStorage,要刪的key)
 function deleteitem(key){
@@ -33,18 +24,40 @@ function deleteitem(key){
 }
 
 function Showbuyitmes(buyingList){
-    let ShowCart = document.getElementById("MyCart");
-    var addCartHtml=''; 
+    let CheckCart = document.getElementById("CheckCart");
+    //console.log(CheckCart);
+    var CheckCartHtml=''; 
+    let totalMoney = 0;
     for(let i=0; i<buyingList.length; i++){
-        addCartHtml += `      
-        <div class="item">
-            <img src="img/${buyingList[i].BandName}/${buyingList[i].songName}.jpg" alt="">
-            <span class="songName">${buyingList[i].songName}</span>
-            <span class="bandName">${buyingList[i].BandName}</span>
-            <span class="price">$${buyingList[i].price}</span>
-            <img class="cancel" onclick="deleteitem(${i})" src="img/icon/cancel.png" alt="">
-        </div>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
+        totalMoney += parseInt(buyingList[i].price);
+        CheckCartHtml += `      
+        <tr class="item">
+            <th scope="row">${i+1}</th>
+            <td><img class="songPic" src="img/${buyingList[i].BandName}/${buyingList[i].songName}.jpg" alt=""></td>
+            <td><span class="songName">${buyingList[i].songName}</span></td>
+            <td><span class="bandName">${buyingList[i].BandName}</span></td>
+            <td><span class="price">$${buyingList[i].price}</span></td>
+            <td><img class="cancelIcon" class="cancel" onclick="deleteitem(${i})" src="img/icon/cancel.png" alt=""></td>
+        </tr>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
     }
+    let totalSum = document.getElementById("totalSum");
+    
     //console.log(addCartHtml);
-    ShowCart.innerHTML = addCartHtml + `<button class="m-3">Check Out</button>`;
+    CheckCart.innerHTML = CheckCartHtml;
+    totalSum.innerHTML = `<td id="totalSum">${totalMoney}</td>`;
+}
+
+var stepper1Node = document.querySelector('#stepper1');
+var stepper1 = new Stepper(document.querySelector('#stepper1'));
+
+function finish(){
+    alert("下訂完成");
+    self.location = 'index.html';
+
+    //先接現在的localStorage中的資料，字串轉物件
+    var buyingListString = localStorage.getItem('myShoppingList');
+    buyingList = JSON.parse(buyingListString);
+    buyingList='';
+    localStorage.setItem('myShoppingList',buyingList);
+    Showbuyitmes(buyingList);
 }

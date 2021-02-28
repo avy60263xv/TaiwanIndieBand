@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="node_modules/bs-stepper/dist/css/bs-stepper.min.css">
     <script defer src="mycart.js"></script>
     <script defer src="checkout.js"></script>
+    <!--<script defer src="checkout.js"></script>-->
     <script defer src="ValidateEmail.js"></script>
     <title>台灣獨立樂團</title>
     <link rel="shortcut icon" href="img/logo.ico"/>
@@ -83,10 +84,28 @@
               <div class="bs-stepper-content">
                 <!-- your steps content here -->
                 <div id="test-l-1" class="content">
-                  <p class="text-center">test 1</p>
-                  
-
-
+                  <table class="table">
+                    <thead>
+                      <tr class>
+                        <th scope="col"> </th>
+                        <th scope="col"></th>
+                        <th scope="col">歌名</th>
+                        <th scope="col">樂團</th>
+                        <th scope="col">價格</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="CheckCart">
+                    </tbody>
+                    <tbody>
+                      <th scope="row"></th>
+                      <td></td>
+                      <td></td>
+                      <td class="total">總價</td>
+                      <td class="total">$</td>
+                      <td id="totalSum"></td>
+                    </tbody>
+                  </table>
                   <button class="btn btn-primary" onclick="stepper1.next()">付款</button>
                 </div>
                 <div id="test-l-2" class="content">
@@ -95,7 +114,7 @@
                 </div>
                 <div id="test-l-3" class="content">
                   <p class="text-center">test 3</p>
-                  <button class="btn btn-primary" onclick="stepper1.next()">送出訂單</button>
+                  <button class="btn btn-primary" onclick="finish()">送出訂單</button>
                 </div>
               </div>
             </div>
@@ -137,26 +156,5 @@
         </div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  
-    <script>
-      var stepper1Node = document.querySelector('#stepper1')
-      var stepper1 = new Stepper(document.querySelector('#stepper1'))
-
-      stepper1Node.addEventListener('show.bs-stepper', function (event) {
-        console.warn('show.bs-stepper', event)
-      })
-      stepper1Node.addEventListener('shown.bs-stepper', function (event) {
-        console.warn('shown.bs-stepper', event)
-      })
-
-      var stepper2 = new Stepper(document.querySelector('#stepper2'), {
-        linear: false,
-        animation: true
-      })
-      var stepper3 = new Stepper(document.querySelector('#stepper3'), {
-        animation: true
-      })
-    </script>
   </body>
 </html>

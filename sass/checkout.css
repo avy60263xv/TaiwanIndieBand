@@ -11825,6 +11825,33 @@ nav {
   right: 0px;
 }
 
+.processBar .total {
+  color: #9e82ba;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.processBar #totalSum {
+  color: #9e82ba;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.processBar .item {
+  font-size: 1rem !important;
+}
+
+.processBar .item .songPic {
+  width: 80px;
+  height: 80px;
+}
+
+.processBar .item .cancelIcon {
+  width: 15px;
+  height: 15px;
+}
+
 .active .bs-stepper-circle {
   background-color: #f01a75 !important;
 }
