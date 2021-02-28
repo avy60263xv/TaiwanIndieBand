@@ -169,13 +169,13 @@ function allstop(){
     }
     //所有暫停鍵都消失
     let pauseicon = document.getElementsByClassName("bi-pause-circle-fill");
-    console.log(pauseicon);
+    //console.log(pauseicon);
     for (let i = 0; i < pauseicon.length; i++) {
         pauseicon[i].style.display = "none";
     }
     //所有播放鍵都跑出來
     let playicon = document.getElementsByClassName("bi-play-circle-fill");
-    console.log(playicon);
+    //console.log(playicon);
     for (let j = 0; j < playicon.length; j++) {
         playicon[j].style.display = "inline";
     }
