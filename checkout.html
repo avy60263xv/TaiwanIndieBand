@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="sass/checkout.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <!-- Slider -->
     <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <!--Stepper-->
+    <script src="node_modules/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bs-stepper/dist/css/bs-stepper.min.css">
     <script defer src="mycart.js"></script>
-    <script defer src="slider.js"></script>
+    <script defer src="checkout.js"></script>
     <script defer src="ValidateEmail.js"></script>
     <title>台灣獨立樂團</title>
     <link rel="shortcut icon" href="img/logo.ico"/>
@@ -48,67 +52,58 @@
     <div id="MyCart" class="ShowMyCart shadow bg-body rounded-3">
     </div>
 
-    <section class="mainImg mb-5">
-      <div class="circle1"></div>
-      <div class="circle2"></div>
-      <div class="circle3"></div>
-      <div class="container">
+    <!--processBar-->
+    <section class="processBar m-5">
+      <div class="conatiner">
         <div class="row">
-          <h1 class="col-12 col-lg-4">獨立音樂</h1>
-        </div>
-        <div class="row">
-          <p class="col-12 col-lg-8">是指有別於主流商業唱片廠牌所製作的音樂。顧名思義，獨立音樂的製作過程獨立自主，從錄音到出版都由音樂家獨力完成。獨立一詞可用以形容其他音樂類型，如獨立搖滾。雖然許多獨立音樂家的風格無法清楚界定，因而歸類到不同的音樂類型，但在一般說法上或音樂評論中依舊視為一種音樂類型，包括那些非獨立製作的音樂。</p>
-          <button class="col-12 col-lg-4 colorButton" onclick="location.href='music.html'">前往試聽</button>
-        </div>
-      </div>
-    </section>
+          <div class="col col-sm-12 col-lg-10 processBarMain">
+            <div id="stepper1" class="bs-stepper">
+              <div class="bs-stepper-header">
+                <div class="step" data-target="#test-l-1">
+                  <button type="button" class="btn step-trigger">
+                    <span class="bs-stepper-circle">1</span>
+                    <span class="bs-stepper-label">確認訂單</span>
+                  </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#test-l-2">
+                  <button type="button" class="btn step-trigger">
+                    <span class="bs-stepper-circle">2</span>
+                    <span class="bs-stepper-label">輸入信用卡</span>
+                  </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#test-l-3">
+                  <button type="button" class="btn step-trigger">
+                    <span class="bs-stepper-circle">3</span>
+                    <span class="bs-stepper-label">完成訂單</span>
+                  </button>
+                </div>
+              </div>
+              <div class="bs-stepper-content">
+                <!-- your steps content here -->
+                <div id="test-l-1" class="content">
+                  <p class="text-center">test 1</p>
+                  
 
-    <section class="NewBaneTitle">
-      <div class="container">
-        <div class="row justify-content-center">
-          <h1 class="col-12">最新樂團</h1>
-        </div>
-        <div class="row justify-content-center">
-          <h5 class="col-12 mt-3 mb-5">台灣獨立樂團，你不可錯過的好音樂！</h5>
-        </div>
-      </div>
-    </section>
 
-    <section class="Slider">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 splide Arrow">
-            <div class="splide__arrows">
-              <button class="splide__arrow splide__arrow--prev"><i class="bi bi-arrow-left-short"></i></button>
-              <button class="splide__arrow splide__arrow--next"><i class="bi bi-arrow-right-short"></i></button>
-            </div>
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide"><img src="img/slideImages/滅火器FireEX.jpg" alt=""><div class="NewBandMask"><span>滅火器<br>Fire EX.</span></div></img></li>
-                <li class="splide__slide"><img src="img/slideImages/美秀集團 AmazingShow.jpeg" alt=""><div class="NewBandMask"><span>美秀集團<br>Amazing Show</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/老王樂團  Your Woman Sleep with Others.jpg" alt=""><div class="NewBandMask"><span>老王樂團<br>Your Woman Sleep with Others</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/草東沒有派對 No Party For Cao Dong.jpg" alt=""><div class="NewBandMask"><span>草東沒有派對<br>No Party For Cao Dong</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/甜約翰Sweet John.jpg" alt=""><div class="NewBandMask"><span>甜約翰<br>Sweet John</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/落日飛車 Sunset Rollercoaster.jpg" alt=""><div class="NewBandMask"><span>落日飛車<br>Sunset Rollercoaster</span></div></li>
-              </ul>
+                  <button class="btn btn-primary" onclick="stepper1.next()">付款</button>
+                </div>
+                <div id="test-l-2" class="content">
+                  <p class="text-center">test 2</p>
+                  <button class="btn btn-primary" onclick="stepper1.next()">下一步</button>
+                </div>
+                <div id="test-l-3" class="content">
+                  <p class="text-center">test 3</p>
+                  <button class="btn btn-primary" onclick="stepper1.next()">送出訂單</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="MBTsection mt-5">
-      <div class="row">
-        <div class="rectangle"></div>
-        <img src="img/MBTsection.png" alt="">
-        <div class="MBTword">
-          <span>音樂，信仰，台味</span><br>
-          <span>TAIWAN</span><br>
-          <div class="line"></div>
-          <span>MUSIC</span>
-        </div>
-      </div>
-    </section>
 
     <section class="footer">
       <div class="container">
@@ -143,5 +138,25 @@
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  
+    <script>
+      var stepper1Node = document.querySelector('#stepper1')
+      var stepper1 = new Stepper(document.querySelector('#stepper1'))
+
+      stepper1Node.addEventListener('show.bs-stepper', function (event) {
+        console.warn('show.bs-stepper', event)
+      })
+      stepper1Node.addEventListener('shown.bs-stepper', function (event) {
+        console.warn('shown.bs-stepper', event)
+      })
+
+      var stepper2 = new Stepper(document.querySelector('#stepper2'), {
+        linear: false,
+        animation: true
+      })
+      var stepper3 = new Stepper(document.querySelector('#stepper3'), {
+        animation: true
+      })
+    </script>
   </body>
 </html>

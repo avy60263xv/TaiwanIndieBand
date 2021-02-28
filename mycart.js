@@ -3,7 +3,7 @@ var getmyShoppingList = localStorage.getItem('myShoppingList');
 var buyingList; //存有購買的歌曲，用物件存，購物車列表
 if(getmyShoppingList){
     buyingList = JSON.parse(getmyShoppingList);
-    console.log(buyingList);
+    //console.log(buyingList);
     Showbuyitmes(buyingList);
 }else{
     buyingList = [];

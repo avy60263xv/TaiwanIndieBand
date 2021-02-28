@@ -1,5 +1,5 @@
 const ScreenWidth =  document.body.offsetWidth;
-console.log(ScreenWidth);
+//console.log(ScreenWidth);
 document.addEventListener( 'DOMContentLoaded', function () {
     if (ScreenWidth<=414){
         SmallSlider();
