@@ -11811,6 +11811,7 @@ nav {
 
 .SliderPhone {
   margin: 100px 0;
+  min-height: 500px;
 }
 
 .SliderPhone span {
