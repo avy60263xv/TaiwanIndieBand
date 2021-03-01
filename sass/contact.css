@@ -11809,60 +11809,34 @@ nav {
   }
 }
 
-.processBar .processBarMain {
+.contactMain label {
+  font-weight: 500;
+  color: #343a40;
+  font-size: 1rem;
+}
+
+.contactMain .conatctTitle {
+  text-align: center;
+  font-weight: 500;
+  color: #f01a75;
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+  .contactMain .conatctTitle {
+    font-size: 2rem;
+  }
+}
+
+.contactMain .line {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(45deg, #57ddff 0%, #ee196a 100%);
+}
+
+.contactMain .colorButton {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-
-.processBar .content {
-  position: relative;
-}
-
-.processBar .content button {
-  color: white;
-  position: absolute;
-  right: 0px;
-}
-
-.processBar .total {
-  color: #9e82ba;
-  font-size: font-size(1rem !important);
-  font-weight: 700;
-  text-align: right;
-}
-
-.processBar #totalSum {
-  color: #9e82ba;
-  font-size: 1rem !important;
-  font-weight: 700;
-}
-
-.processBar .item {
-  font-size: 0.8rem !important;
-}
-
-.processBar .item .songPic {
-  width: 80px;
-  height: 80px;
-}
-
-.processBar .item .cancelIcon {
-  cursor: pointer;
-  width: 15px;
-  height: 15px;
-}
-
-.processBar .item .cancelIcon:hover {
-  border: solid 2px red;
-  border-radius: 50%;
-}
-
-.next2 {
-  margin: 75px 0;
-}
-
-.active .bs-stepper-circle {
-  background-color: #f01a75 !important;
-}
-/*# sourceMappingURL=checkout.css.map */
+/*# sourceMappingURL=contact.css.map */

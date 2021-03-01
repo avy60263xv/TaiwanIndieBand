@@ -4,7 +4,6 @@
     .processBarMain
         left: 50%
         transform: translateX(-50%)
-
     .content
         position: relative
         button
@@ -13,21 +12,24 @@
             right: 0px
     .total
         color: $purple
-        font-size: 20px
+        font-size:  font-size(1rem !important)
         font-weight: 700
         text-align: right
     #totalSum
         color: $purple
-        font-size: 20px
+        font-size: (1rem !important)
         font-weight: 700
-
     .item
-        @include font-size(1rem !important)
+        @include font-size(0.8rem !important)   
         img
         .songPic
             +size(80px, 80px)
         .cancelIcon
+            cursor: pointer
             +size(15px, 15px)
+            &:hover
+                border: solid 2px red
+                border-radius: 50%
         
 .next2
     margin: 75px 0
