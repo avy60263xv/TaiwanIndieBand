@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="sass/APP.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <!-- Slider -->
     <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
     <script defer src="mycart.js"></script>
-    <script defer src="slider.js"></script>
+    <script defer src="sliderPhone.js"></script>
     <script defer src="ValidateEmail.js"></script>
     <title>台灣獨立樂團</title>
     <link rel="shortcut icon" href="img/logo.ico"/>
@@ -48,64 +48,53 @@
     <div id="MyCart" class="ShowMyCart shadow bg-body rounded-3">
     </div>
 
-    <section class="mainImg mb-5">
-      <div class="circle1"></div>
-      <div class="circle2"></div>
-      <div class="circle3"></div>
+    <section class="SliderPhone">
       <div class="container">
-        <div class="row">
-          <h1 class="col-12 col-lg-4">獨立音樂</h1>
-        </div>
-        <div class="row">
-          <p class="col-12 col-lg-8">是指有別於主流商業唱片廠牌所製作的音樂。顧名思義，獨立音樂的製作過程獨立自主，從錄音到出版都由音樂家獨力完成。獨立一詞可用以形容其他音樂類型，如獨立搖滾。雖然許多獨立音樂家的風格無法清楚界定，因而歸類到不同的音樂類型，但在一般說法上或音樂評論中依舊視為一種音樂類型，包括那些非獨立製作的音樂。</p>
-          <button class="col-12 col-lg-4 colorButton" onclick="location.href='music.html'">前往試聽</button>
-        </div>
-      </div>
-    </section>
+        <div class="row"> 
+          <div class="col-sm-12 col-md-8 col-lg-4">
+            <span>想要聽更多？就在台灣獨立樂團 APP，你我一起聽見未來的流行</span>
+            <p class="mt-3">最新、最多元的音樂社群平台<br>
+              你還不知道 街聲站在音樂最前線嗎！<br>
+              有些歌就只在街聲聽的到啦 還不快來挖寶！
+            </p>
+            <img class="mt-3" src="img/btn-apple-store.png" alt="" class="col-5">
+            <img class="mt-3" src="img/btn-google-play.png" alt="" class="col-5">
+          </div>
 
-    <section class="NewBaneTitle">
-      <div class="container">
-        <div class="row justify-content-center">
-          <h1 class="col-12">最新樂團</h1>
-        </div>
-        <div class="row justify-content-center">
-          <h5 class="col-12 mt-3 mb-5">台灣獨立樂團，你不可錯過的好音樂！</h5>
-        </div>
-      </div>
-    </section>
-
-    <section class="Slider">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 splide Arrow">
-            <div class="splide__arrows">
-              <button class="splide__arrow splide__arrow--prev"><i class="bi bi-arrow-left-short"></i></button>
-              <button class="splide__arrow splide__arrow--next"><i class="bi bi-arrow-right-short"></i></button>
-            </div>
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide"><img src="img/slideImages/滅火器FireEX.jpg" alt=""><div class="NewBandMask"><span>滅火器<br>Fire EX.</span></div></img></li>
-                <li class="splide__slide"><img src="img/slideImages/美秀集團 AmazingShow.jpeg" alt=""><div class="NewBandMask"><span>美秀集團<br>Amazing Show</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/老王樂團  Your Woman Sleep with Others.jpg" alt=""><div class="NewBandMask"><span>老王樂團<br>Your Woman Sleep with Others</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/草東沒有派對 No Party For Cao Dong.jpg" alt=""><div class="NewBandMask"><span>草東沒有派對<br>No Party For Cao Dong</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/甜約翰Sweet John.jpg" alt=""><div class="NewBandMask"><span>甜約翰<br>Sweet John</span></div></li>
-                <li class="splide__slide"><img src="img/slideImages/落日飛車 Sunset Rollercoaster.jpg" alt=""><div class="NewBandMask"><span>落日飛車<br>Sunset Rollercoaster</span></div></li>
-              </ul>
+          <div class="col col-sm-12 col-lg-8 mt-3">
+            <img class="iphonemask" src="img/sliderPhone/iphone.svg" alt="">
+            <div class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="splide__slide__container">
+                      <img src="img/sliderPhone/phoneImg03.jpg">
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="splide__slide__container">
+                      <img src="img/sliderPhone/phoneImg01.jpg">
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="splide__slide__container">
+                      <img src="img/sliderPhone/phoneImg02.png">
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="splide__slide__container">
+                      <img src="img/sliderPhone/phoneImg03.jpg">
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="splide__slide__container">
+                      <img src="img/sliderPhone/phoneImg01.jpg">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="MBTsection mt-5">
-      <div class="row">
-        <div class="rectangle"></div>
-        <img src="img/MBTsection.png" alt="">
-        <div class="MBTword">
-          <span>音樂，信仰，台味</span><br>
-          <span>TAIWAN</span><br>
-          <div class="line"></div>
-          <span>MUSIC</span>
         </div>
       </div>
     </section>

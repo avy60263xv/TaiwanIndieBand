@@ -1,0 +1,24 @@
+@import "main"
+
+.SliderPhone
+    margin: 100px 0
+    span
+        @include font-size(2rem)
+        font-weight: 500
+        color: $pink    
+    p
+        @include font-size(1rem)
+        font-weight: 500
+        color: $gray-800
+    img
+        +size(150px, auto)
+        margin-right: 20px
+    .iphonemask
+        position: absolute
+        z-index: 100
+        +size(200px, auto)
+    .splide
+        img
+            +size(180px, auto)
+            top: 20px
+            left: 10px
