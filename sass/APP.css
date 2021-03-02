@@ -11836,6 +11836,10 @@ nav {
   min-height: 500px;
 }
 
+.SliderPhone .splideouter {
+  padding-top: 25px;
+}
+
 .SliderPhone span {
   font-size: calc(1.325rem + 0.9vw);
   font-weight: 500;
