@@ -141,6 +141,9 @@ function Showbuyitmes(buyingList){
         </div>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
     }
     //console.log(addCartHtml);
+    //動態改購物車旁數字
+    const mycartNum = document.getElementById("mycartNum")
+    mycartNum.innerHTML = buyingList.length;
     ShowCart.innerHTML = addCartHtml + `<button onclick="location.href='checkout.html'" class="m-3">Check Out</button>`;
 }
 

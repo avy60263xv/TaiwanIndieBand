@@ -29,7 +29,7 @@ function deleteitem(key){
     buyingList.splice(key,1); //刪除使用者點的那一筆資料，並重新存回localStorage
     localStorage.setItem('myShoppingList',JSON.stringify(buyingList));
     Showbuyitmes(buyingList);
-    
+
 }
 
 function Showbuyitmes(buyingList){
@@ -45,6 +45,9 @@ function Showbuyitmes(buyingList){
             <img class="cancel" onclick="deleteitem(${i})" src="img/icon/cancel.png" alt="">
         </div>`; //新增html語法 / 如果該項刪除鈕被點下去，去執行刪除function
     }
+    //動態改購物車旁數字
+    const mycartNum = document.getElementById("mycartNum")
+    mycartNum.innerHTML = buyingList.length;
     //console.log(addCartHtml);
     ShowCart.innerHTML = addCartHtml + `<button onclick="location.href='checkout.html'" class="m-3">Check Out</button>`;
 }

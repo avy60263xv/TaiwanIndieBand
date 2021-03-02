@@ -11388,6 +11388,15 @@ nav {
   z-index: 100;
 }
 
+#mycartNum {
+  position: relative;
+  right: 5px;
+  top: 7px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .footer {
   width: 100%;
   height: auto;
@@ -11811,6 +11820,15 @@ nav {
   .MBTsection .MBTword span {
     font-size: 16px;
   }
+}
+
+#mycartNum {
+  position: relative;
+  right: 5px;
+  top: 7px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .contactMain label {
