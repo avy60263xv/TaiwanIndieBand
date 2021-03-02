@@ -11639,7 +11639,7 @@ nav {
     margin-left: 10px;
   }
   .mainImg .container button {
-    margin: 0px;
+    margin: 20px;
   }
 }
 
@@ -11710,6 +11710,10 @@ nav {
 .Slider {
   background: linear-gradient(45deg, #57ddff 0%, #ee196a 100%);
   padding: 40px;
+}
+
+.Slider button i {
+  line-height: 5px;
 }
 
 .Slider .splide__slide img {
