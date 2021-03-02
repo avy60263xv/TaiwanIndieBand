@@ -53,51 +53,68 @@
       <div class="container">
         <div class="row my-2"><span class="conatctTitle">CONTACT US FOR HELP</span></div>
         <div class="row my-2"><div class="col"></div><div class="col line"></div><div class="col"></div></div>
-        <div class="row my-3">
-          <div class="col-3"></div>
-          <div class="col-md-6">
-            <label for="inputName" class="form-label">姓名(Name)</label>
-            <input type="text" class="form-control" id="inputName">
+        <form class="needs-validation" action="" novalidate>
+          <div class="row my-3">
+            <div class="col-3"></div>
+            <div class="col-md-6">
+              <label for="inputName" class="form-label">姓名(Name)</label>
+              <input type="text" class="form-control" id="inputName" required>
+              <div class="valid-feedback">
+                OK
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row my-3">
-          <div class="col-3"></div>
-          <div class="col-md-6">
-            <label for="inputphone" class="form-label">電話(phone)</label>
-            <input type="text" class="form-control" id="inputphone">
+          <div class="row my-3">
+            <div class="col-3"></div>
+            <div class="col-md-6">
+              <label for="inputphone" class="form-label">電話(phone)</label>
+              <input type="text" class="form-control" id="inputphone" required>
+              <div class="invalid-feedback">
+                請填入電話號碼
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row my-3">
-          <div class="col-3"></div>
-          <div class="col-md-6">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input type="text" class="form-control" id="inputEmail">
+          <div class="row my-3">
+            <div class="col-3"></div>
+            <div class="col-md-6">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="text" class="form-control" id="inputEmail" required>
+              <div class="invalid-feedback">
+                請填入電子郵件
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row my-3">
-          <div class="col-3"></div>
-          <div class="col-md-6">
-            <label for="inputQuestion" class="form-label">問題類別(Question)</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected></option>
-              <option value="1">很漂亮</option>
-              <option value="2">太漂亮了</option>
-              <option value="3">怎麼會這麼漂亮</option>
-            </select>
+          <div class="row my-3">
+            <div class="col-3"></div>
+            <div class="col-md-6">
+              <label for="inputQuestion" class="form-label">問題類別(Question)</label>
+              <select class="form-select" aria-label="Default select example" required>
+                <option selected></option>
+                <option value="1">很漂亮</option>
+                <option value="2">太漂亮了</option>
+                <option value="3">怎麼會這麼漂亮</option>
+              </select>
+              <div class="valid-feedback">
+                選得好！
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row my-3">
-          <div class="col-3"></div>
-          <div class="col-md-6">
-            <label for="inputDescription" class="form-label">問題描述(Description)</label>
-            <textarea class="form-control" id="validationTextarea" placeholder="請敘述您的問題，供我們協助解決，謝謝您" required></textarea>
+          <div class="row my-3">
+            <div class="col-3"></div>
+            <div class="col-md-6">
+              <label for="inputDescription" class="form-label">問題描述(Description)</label>
+              <textarea class="form-control" id="validationTextarea" placeholder="請敘述您的問題，供我們協助解決，謝謝您" required></textarea>
+              <div class="invalid-feedback">
+                請填入詳細問題過程
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row my-3 mt-5">
-          <div class="col-12">
-            <button class="colorButton" onclick="location.href='music.html'">送出問題</button>
+          <div class="row my-3 mt-5">
+            <div class="col-12">
+              <button class="colorButton" type="submit">送出問題</button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </section>
 
@@ -134,5 +151,27 @@
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+      })()
+
+    </script>
   </body>
 </html>
