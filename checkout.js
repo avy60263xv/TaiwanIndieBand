@@ -9,8 +9,10 @@ if(getmyShoppingList){
     buyingList = [];
 }
 
+
 //頁面顯示資料
-Showbuyitmes(buyingList);
+checkbuyitmes(buyingList);
+
 
 //購物車刪除(先收現在的localStorage,要刪的key)
 function deleteitem(key){
@@ -20,10 +22,10 @@ function deleteitem(key){
     buyingList.splice(key,1); //刪除使用者點的那一筆資料，並重新存回localStorage
     localStorage.setItem('myShoppingList',JSON.stringify(buyingList));
     Showbuyitmes(buyingList);
-    
+    checkbuyitmes(buyingList);
 }
 
-function Showbuyitmes(buyingList){
+function checkbuyitmes(buyingList){
     let CheckCart = document.getElementById("CheckCart");
     //console.log(CheckCart);
     var CheckCartHtml=''; 
