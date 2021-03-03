@@ -11765,11 +11765,12 @@ nav {
 }
 
 .MBTsection .rectangle {
-  width: 95vw;
+  width: 90vw;
   height: 100%;
   background: rgba(98, 255, 255, 0.2);
   position: absolute;
   left: 5%;
+  border-radius: 50px 200px 0 0;
 }
 
 .MBTsection img {
