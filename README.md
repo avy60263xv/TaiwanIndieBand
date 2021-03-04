@@ -13,3 +13,18 @@ DEMO: https://avy60263xv.github.io/TaiwanIndieBand/
 6. NPM：利用NPM安裝splidejs等套件，完成滑動圖片功能，節省重複開發的精力與時間。
 7. localStorage Web API：使用Web Storage將網頁資料儲存在使用者的瀏覽器當中，購物車資料可以跨瀏覽器分頁做使用。
 8. 購物車系統：使用者在任何頁面都可刪除購物車音樂，每個頁面也都會抓取localStorage資料，結完帳後購物車的清單也自動清空。
+
+Index Page
+![image](https://github.com/avy60263xv/TaiwanIndieBand/blob/main/Web%20capture_3-3-2021_231845_avy60263xv.github.io.jpeg)
+
+Music Page
+![image](https://github.com/avy60263xv/TaiwanIndieBand/blob/main/Web%20capture_4-3-2021_04525_avy60263xv.github.io.jpeg)
+
+Contact Page
+![image](https://github.com/avy60263xv/TaiwanIndieBand/blob/main/Web%20capture_3-3-2021_231938_avy60263xv.github.io.jpeg)
+
+APP Page
+![image](https://github.com/avy60263xv/TaiwanIndieBand/blob/main/Web%20capture_3-3-2021_231952_avy60263xv.github.io.jpeg)
+
+CheckOut Page
+![image](https://github.com/avy60263xv/TaiwanIndieBand/blob/main/Web%20capture_3-3-2021_232015_avy60263xv.github.io.jpeg)
